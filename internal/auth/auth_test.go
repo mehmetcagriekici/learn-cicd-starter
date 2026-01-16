@@ -35,7 +35,7 @@ func TestGetGetAPIKeyNoAuth(t *testing.T) {
 }
 
 func TestGetAPIKeyMalformed(t *testing.T) {
-	testHeaders.Set("Authorization", "malformed authorization header")
+	testHeaders.Set("Authorization", "malformed_authorization_header")
 	exp := ""
 	res, err := GetAPIKey(testHeaders)
 	if err.Error() != "malformed authorization header" {
