@@ -1,6 +1,6 @@
 package auth
 
-import(
+import (
 	"errors"
 	"net/http"
 	"testing"
@@ -39,7 +39,7 @@ func TestGetAPIKeyMalformed(t *testing.T) {
 	exp := ""
 	res, err := GetAPIKey(testHeaders)
 	if err.Error() != "malformed authorization header" {
-	        t.Errorf("Unexpected error for malformed authorization header! %v\n", err)	
+		t.Errorf("Unexpected error for malformed authorization header! %v\n", err)
 	}
 
 	if res != exp {
