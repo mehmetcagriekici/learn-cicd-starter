@@ -32,4 +32,4 @@ jobs:
         run: go install honnef.co/go/tools/cmd/staticcheck@latest
 
       - name: Run staticcheck
-        run: which staticcheck && staticcheck --version
+        run: which staticcheck && staticcheck ./...
