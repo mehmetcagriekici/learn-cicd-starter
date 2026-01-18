@@ -24,6 +24,8 @@ type apiConfig struct {
 //go:embed static/*
 var staticFiles embed.FS
 
+func unsuded() {}
+
 func main() {
 	err := godotenv.Load(".env")
 	if err != nil {
